@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./assets/cafe.png" type="image/x-icon">
+    <title>Cafe Ontó</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section id="hero">
+        <nav>
+            <ul>
+                <li><a href="#menu" id="menu-btn">menu</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#about">about</a></li>
+            </ul>
+        </nav>
+        
+        <header>
+            <h1>Cafe Ontó</h1>
+        </header>
+        
+        <div class="note">
+            <h3>monday-friday 10-23 | saturday 14-02</h3>
+            <p>4th street, crosscut, coimbatore</p>
+            <small>inspired by <a href="https://www.w3schools.com/w3css/tryw3css_templates_restaurant_modal.htm" target="_blank">w3.css template</a></small>
+        </div>
+    </section>
+
+    <section id="menu" class="modal">
+        <div class="container grid-area">
+            <i id="close-btn" class="fa-regular fa-circle-xmark fa-xl close-btn"></i>
+            <div class="flex-area">
+                <div class="menu-items">
+                    <div class="item-heading">
+                        <h3>Drinks</h3>
+                    </div>
+                    <div class="items">
+                        <p>Expresso<span>₹250</span></p>
+                        <p>Latte<span>₹300</span></p>
+                        <p>americano<span>₹350</span></p>
+                        <p>Cappuccino<span>₹350</span></p>
+                    </div>
+                </div>
+                <div class="menu-items">
+                    <div class="item-heading">
+                        <h3>Sweet</h3>
+                    </div>
+                    <div class="items">
+                        <p>sandwiches<span>₹150</span></p>
+                        <p>Croissants<span>₹200</span></p>
+                        <p>muffins<span>₹250</span></p>
+                    </div>
+                </div>
+                <div class="menu-items">
+                    <div class="item-heading">
+                        <h3>Desserts</h3>
+                    </div>
+                    <div class="items">
+                        <p>Breakfast Tacos<span>₹200</span></p>
+                        <p>Quiche<span>₹220</span></p>
+                        <p>Artisanal pizzas<span>₹250</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Reserve a teable, ask for today's special or just send us a messsage: </p>
+
+            <div class="grid-area">
+                <form action="">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="number" name="people" id="people" placeholder="How many people ?" required>
+                    <input type="datetime-local" name="date" id="date" value="2024-05-15T20.00" placeholder="Date and Time" required>
+                    <input type="text" name="message" id="message" placeholder="Message / special requirements">
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="random-image">
+                <img src="./assets/cafeLogo.png" alt="cafeLogo-removebg">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container grid-area">
+            <h2>About Cafe Ontó</h2>
+            <div class="flex-area card">
+                <div class="image">
+                    <img src="./assets/youngManWaiter.jpg" alt="youngManWaiter">
+                </div>
+                <div class="text">
+                    <h3>coffee makers</h3>
+                    <p>Founded in [Year], [Your Coffee Shop Name] emerged from a humble dream: to serve the perfect brew. From sourcing ethically grown beans to meticulously crafting each cup, our journey has been one of dedication and love. We’ve weathered early mornings, perfected latte art, and celebrated countless smiles across our cozy tables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button type="button" id="back-2-top" class="grid-area">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="./js/main.js"></script>
+
+    <script src="https://kit.fontawesome.com/5a0732a592.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --text: 0, 0%, 100%;
+    --background: 0, 0%, 44%;
+    --accent: 0, 0%, 80%;
+    --accent2: 0, 0%, 0%;
+    --secondary: 0, 0%, 20%;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+
+    color: hsl(var(--text));
+}
+
+.grid-area {
+    display: grid;
+    place-items: center;
+}
+
+.flex-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section#hero {
+    background: url('../assets/coffee-shop-london-bridge.webp') no-repeat center;
+    background-size: cover;
+    filter: grayscale() saturate();
+    -webkit-filter: grayscale();
+
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+section#hero nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 1rem 2rem;
+}
+
+section#hero nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    list-style: none;
+}
+
+section#hero nav ul li {
+    margin: 1rem 0;
+}
+
+section#hero nav ul li a {
+    text-decoration: none;
+
+    color: hsl(var(--text));
+    background-color: hsl(var(--accent2));
+
+    letter-spacing: 1px;
+
+    padding: 1rem;
+
+    transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+section#hero nav ul li a:hover {
+    color: hsl(var(--accent2));
+    background-color: hsl(var(--accent));
+    
+    text-decoration: underline;
+
+    transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+section#hero header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#hero header h1 {
+    font-size: 5rem;
+
+    color: hsl(var(--accent));
+    background-color: hsl(var(--secondary), 0.3);
+
+    padding-inline: 6rem;
+    margin-top: -5rem;
+}
+
+section#hero div.note {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin: 0 1rem 0.5rem;
+}
+
+section#hero div.note > * {
+    margin: 0.2rem 0; 
+
+    color: hsl(var(--text));
+}
+
+section#hero div.note h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+section#hero div.note p {
+    font-size: 1rem;
+}
+
+section#hero div.note small a {
+    color: hsl(var(--accent));
+
+    box-shadow: 0 0 hsl(var(--accent2));
+    
+    transition: color 100ms ease, box-shadow 100ms ease;
+}
+
+section#hero div.note small a:hover {
+    color: hsl(var(--text));
+
+    box-shadow: 0 2px 5px hsl(var(--accent2));
+}
+
+section#menu.modal {
+    display: none;
+}
+
+section#menu.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: hsl(var(--accent2), 0.5);
+    color: hsl(var(--text));
+}
+
+section#menu .container {
+    margin: 2rem auto 1rem;
+
+    position: relative;
+}
+
+section#menu div.flex-area {
+    flex-direction: column;
+
+    width: 80%;
+}
+
+section#menu h3 {
+    color: hsl(var(--text));
+
+    font-size: 1.7rem;
+}
+
+section#menu div.menu-items {
+    width: 100%;
+
+    text-align: start;
+}
+
+section#menu div.menu-items div.item-heading {
+    background-color: hsl(var(--accent2));
+
+    padding: 0.5rem 1.5rem;
+}
+
+section#menu div.menu-items div.items {
+    background-color: hsl(var(--text));
+    color: hsl(var(--accent2), 0.8);
+    padding-block: 0.5rem;
+}
+
+section#menu div.items p {
+    padding: 0.2rem 2rem;
+    font-size: 1.2rem;
+}
+
+section#menu div.items p > span {
+    margin-inline: 0.5rem;
+    color: hsl(var(--secondary));
+
+    font-weight: 600;
+}
+
+section#menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 6.8rem;
+
+    width: 2rem;
+    height: 1rem;
+}
+
+section#menu .close-btn:hover {
+    color: hsl(var(--accent), 0.5);
+}
+
+section#contact {
+    padding: 11rem 0;
+    margin: 0;
+
+    color: hsl(var(--text));
+    background-color: hsl(var(--secondary));
+}
+
+section#contact .container {
+    position: relative;
+}
+
+section#contact .container h2 {
+    font-size: 2rem;
+
+    margin-bottom: 0.2rem;
+}
+
+section#contact .container p {
+    font-size: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+section#contact form {
+    width: 50%;
+}
+
+section#contact  form input {
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    outline: none;
+
+    color: hsl(var(--secondary));
+}
+
+section#contact form button {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    background-color: hsl(var(--background), 0.6);
+    color: hsl(var(--text));
+
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    transition: border-radius 100ms cubic-bezier(0.165, 0.84, 0.44, 1), 
+                color 100ms cubic-bezier(0.165, 0.84, 0.44, 1), 
+                background-color 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+section#contact form button:hover {
+    border-radius: 1rem;
+
+    background-color: hsl(var(--background), 0.7);
+    color: hsl(var(--text), 0.5);
+}
+
+section#contact div.random-image {
+    position: absolute;
+    top: -25%;
+    left: 5%;
+    z-index: 0;
+
+    width: 15rem;
+    height: auto;
+}
+
+section#contact div.random-image img {
+    rotate: 25deg;
+
+    width: inherit;
+}
+
+section#about {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent2));
+
+    padding: 7rem 0;
+}
+
+section#about h2 {
+    font-size: 3rem;
+
+    padding: 3rem 0;
+}
+
+section#about div.card {
+    width: 80%;
+
+    padding: 0 0 2rem;
+}
+
+section#about div.card div {
+    width: 50%;
+}
+
+section#about div.text > * {
+    text-align: justify;
+}
+
+section#about div.text h3 {
+    font-size: 2rem;
+}
+
+section#about div.text p {
+    width: 45ch;
+}
+
+#back-2-top {
+    background-color: hsl(var(--background));
+    opacity: 0;
+
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+#back-2-top.visible {
+    opacity: 1;
+}
