@@ -1,7 +1,11 @@
-const back2top = document.querySelector('#back-2-top'),
+import { form, handleSubmit } from './formDataApi.mjs';
+// import { carousel } from './carousel.js';
+
+let back2top = document.querySelector('#back-2-top'),
             offset = 400,
             body = document.body,
-            docElem = document.documentElement;
+            docElem = document.documentElement,
+            scrollPos = 0;
 
 window.addEventListener('scroll', (e) => {
     scrollPos = body.scrollTop || docElem.scrollTop;
@@ -15,7 +19,7 @@ back2top.addEventListener('click', (e) => {
     window.scrollTo(0, 0);
 });
 
-const menu = document.querySelector('#menu-btn'),
+let menu = document.querySelector('#menu-btn'),
     modal = document.querySelector('#menu');
 
 menu.addEventListener('click', (e) => {
@@ -26,7 +30,7 @@ menu.addEventListener('click', (e) => {
     }
 });
 
-const closeBtn = document.querySelector('#close-btn');
+let closeBtn = document.querySelector('#close-btn');
 
 closeBtn.addEventListener('click', (e) => {
     e.preventDefault;
@@ -37,3 +41,9 @@ closeBtn.addEventListener('click', (e) => {
         modal.className = 'open';
     }
 })
+
+// form submission check
+form.addEventListener('submit', handleSubmit);
+
+// carousel event
+// carousel(1);

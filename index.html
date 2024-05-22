@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./assets/cafe.png" type="image/x-icon">
     <title>Cafe Ontó</title>
 
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,6 +16,7 @@
         <nav>
             <ul>
                 <li><a href="#menu" id="menu-btn">menu</a></li>
+                <li><a href="./photogo.html" target="_self">pho to go</a></li>
                 <li><a href="#contact">contact</a></li>
                 <li><a href="#about">about</a></li>
             </ul>
@@ -33,7 +35,7 @@
 
     <section id="menu" class="modal">
         <div class="container grid-area">
-            <i id="close-btn" class="fa-regular fa-circle-xmark fa-xl close-btn"></i>
+            <i id="close-btn" class="fa-regular fa-circle-xmark fa-2xl close-btn"></i>
             <div class="flex-area">
                 <div class="menu-items">
                     <div class="item-heading">
@@ -77,6 +79,11 @@
 
             <div class="grid-area">
                 <form action="">
+                    <div class="radioBtn flex-area">
+                        <label for="salutation-mr"><input type="radio" name="salutation" id="salutation-mr" value="salutation-mr">Mr</label>
+                        <label for="salutation-mrs"><input type="radio" name="salutation" id="salutation-mrs" value="salutation-mrs">Mrs</label>
+                        <label for="salutation-ms"><input type="radio" name="salutation" id="salutation-ms" value="salutation-ms">Ms</label>
+                    </div>
                     <input type="text" name="name" id="name" placeholder="Name" required>
                     <input type="number" name="people" id="people" placeholder="How many people ?" required>
                     <input type="datetime-local" name="date" id="date" value="2024-05-15T20.00" placeholder="Date and Time" required>
@@ -110,7 +117,7 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.mjs"></script>
 
     <script src="https://kit.fontawesome.com/5a0732a592.js" crossorigin="anonymous"></script>
 </body>
